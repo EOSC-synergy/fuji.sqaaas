@@ -1,0 +1,9 @@
+services:
+  qc.fair_bluesy-periwinkle-llama:
+    image: steinsteiny/fuji:fair
+    volumes:
+    - source: ./
+      target: /sqaaas-build
+      type: bind
+    working_dir: /sqaaas-build
+version: '3.7'
