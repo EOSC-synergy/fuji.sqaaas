@@ -1,6 +1,8 @@
 services:
-  qc.fair_slaphappy-puce-buzzard:
-    image: steinsteiny/fuji:fair
+  qc.fair_leaky-copper-eel:
+    build:
+      context: ./github.com/EOSC-synergy/sqaaas-tooling/QC.FAIR
+      dockerfile: Dockerfile
     volumes:
     - source: ./
       target: /sqaaas-build
