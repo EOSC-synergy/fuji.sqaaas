@@ -1,8 +1,6 @@
 services:
-  qc.fair_leaky-copper-eel:
-    build:
-      context: ./github.com/EOSC-synergy/sqaaas-tooling/QC.FAIR
-      dockerfile: Dockerfile
+  qc.fair_woolly-cerise-tamarin:
+    image: steinsteiny/fuji:v1.3.8.full
     volumes:
     - source: ./
       target: /sqaaas-build

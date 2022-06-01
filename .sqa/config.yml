@@ -11,7 +11,9 @@ sqa_criteria:
     repos:
       this_repo:
         commands:
-        - fair-eva.py -ID 10261/157765 -R oai-pmh -B http://digital.csic.es/dspace-oai/request
-          --tool_endpoint http://localhost:9090/v1.0/rda/rda_all
-        container: qc.fair_leaky-copper-eel
+        - 'curl -H ''Accept: application/json'' -H "Content-Type: application/json"
+          -H "Authorization: Basic bWFydmVsOndvbmRlcndvbWFu" -X POST -d ''{"metadata_service_endpoint":"http://digital.csic.es/dspace-oai/request"
+          "metadata_service_type":"oai_pmh" "object_identifier":"http://hdl.handle.net/10261/157765"
+          "test_debug":true "use_datacite":true}'' http://localhost:1071/fuji/api/v1/evaluate'
+        container: qc.fair_woolly-cerise-tamarin
 timeout: 600
